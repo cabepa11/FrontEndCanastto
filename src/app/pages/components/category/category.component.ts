@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../../../services/shared.service';
+import { Category } from '../../interfaces/interface';
 
 @Component({
   selector: 'app-category',
@@ -8,7 +9,7 @@ import { SharedService } from '../../../services/shared.service';
 })
 export class CategoryComponent implements OnInit {
 
-  categories: any;  
+  categories: Category[]=[];  
 
   constructor(private sharedService: SharedService) { }
 
