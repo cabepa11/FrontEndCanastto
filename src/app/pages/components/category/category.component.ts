@@ -15,12 +15,7 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
     this.sharedService.getCategory().then( (resp:any) => {
         this.categories = resp.categories.reverse(); 
-        // resp.products.forEach((element:any) => {
-        //   for(let category of element.product_data.categories ) {
-        //     console.log(category.category_id)
-        //     this.products = category.category_id
-        //   }
-        // });
+
     })
   }
 }
