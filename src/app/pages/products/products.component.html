@@ -1,1 +1,7 @@
-<app-category></app-category>
+<div *ngFor="let category of categories">
+    <p class="title">{{category.name}}</p>
+    <hr color="#cfcfcf">
+</div>
+<div *ngFor="let product of products">
+    <app-product [products]="product.product_data"></app-product>
+</div>
