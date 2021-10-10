@@ -11,10 +11,6 @@ export class SharedService {
 
   constructor(private http: HttpClient) { }
 
-  login() {
-
-  }
-
   getCategory() {
     return this.http.get(this.url + "5ed0b4443500005b00ff9e02").toPromise();
   }

@@ -1,7 +1,21 @@
 <div *ngFor="let category of categories">
     <p class="title">{{category.name}}</p>
     <hr color="#cfcfcf">
-</div>
-<div *ngFor="let product of products">
-    <app-product [products]="product.product_data"></app-product>
+    <div *ngIf="category.ordinal == 1">
+        <div *ngFor="let promo of promos">
+            <app-promo [promos]="promo.product_data"></app-promo>
+        </div>
+    </div>
+
+    <div *ngIf="category.ordinal == 2">
+        <div *ngFor="let basic of basicProduct">
+            <app-basic [basic]="basic.product_data"></app-basic>
+        </div>
+    </div>
+
+    <div *ngIf="category.ordinal == 3">
+        <div *ngFor="let item of timeLimite">
+            <app-limited [limited]="item.product_data"></app-limited>
+        </div>
+    </div>
 </div>

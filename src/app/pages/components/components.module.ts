@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductComponent } from './product/product.component';
-
-
+import { PromoComponent } from './promo/promo.component';
+import { BasicComponent } from './basic/basic.component';
+import { LimitedComponent } from './limited/limited.component';
 
 @NgModule({
   declarations: [
-    ProductComponent
+    PromoComponent,
+    BasicComponent,
+    LimitedComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    ProductComponent
+    PromoComponent,
+    BasicComponent,
+    LimitedComponent
   ]
 })
 export class ComponentsModule { }

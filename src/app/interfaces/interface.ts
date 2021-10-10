@@ -1,12 +1,12 @@
 export interface ProductData {
   product_data: Product;
+  category: Category;
 }
 export interface Category {
   id: number;
   name: string;
   ordinal: number;
 }
-
 export interface Product {
   id: number;
   kind: number;
@@ -17,7 +17,6 @@ export interface Product {
   stock: number;
   ordinal: number;
 }
-
 export interface Categories {
   category_id: number;
   ordinal: number;

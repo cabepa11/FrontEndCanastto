@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="shadow" *ngIf="basic.kind == 2">
+        <img [src]="img + basic.ean + format" class="img-kind1">
+        <hr color="#efefef">
+        <div class="grid-1">
+            <div class="text-kind1">
+                {{basic.name}}
+            </div>
+            <div>
+                <button class="button">Comprar</button>
+            </div>
+            <div class="money-kind1">
+                {{basic.price | currency:'$':'symbol':'1.0-0'}}
+            </div>
+        </div>
+    </div>
+
+    <div class="shadow" *ngIf="basic.kind == 1">
+        <div class="grid-2">
+            <img [src]="img + basic.ean + format" class="img-kind2">
+            <div class="text-kind2">
+                {{basic.name}}
+                <p class="money-kind2">
+                    {{basic.price | currency:'$':'symbol':'1.0-0'}}
+                </p>
+            </div>
+            <div>
+                <button class="button">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
